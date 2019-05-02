@@ -33,10 +33,10 @@ def load_images(img_dir, train_annot_dir, test_annot_dir, cls_dir):
     
     start_ts = time.time()
     os.chdir(img_dir)
-    sc_data = np.array([cv2.imread(filename) for filename in sorted(glob.glob('*.jpg'), key=lambda x: int(os.path.splitext(x)[0]))])
+    sc_data = np.array([cv2.imread(filename) for filename in sorted(glob.glob('*.jpg'), key = lambda x: int(os.path.splitext(x)[0]))])
     os.chdir('C:/Users/sungi/Documents/DSC672/')
     
-    if img_dir == 'saved_images/training/':
+    if img_dir == 'saved_images/training/' or img_dir == 'saved_images/resized/training/':
         meta = loadmat(cls_dir)
         cls_name = meta['class_names'][0]
         data_labels = np.array([img_label[0] for img_label in cls_name])
@@ -50,7 +50,7 @@ def load_images(img_dir, train_annot_dir, test_annot_dir, cls_dir):
     
         return sc_data, train_data_class, data_labels
     
-    elif img_dir == 'saved_images/testing/':
+    elif img_dir == 'saved_images/testing/' or img_dir == 'saved_images/resized/testing/':
         test_mat = loadmat(test_annot_dir)
         test_annot = test_mat['annotations'][0]
 
@@ -120,10 +120,10 @@ def vehicle_detect(sc_data, bounding_boxes):
 
 
 
-def save_as_jpg(train_img_data, test_img_data):
+def save_as_jpg(train_img_data, test_img_data, save_dir = 'C:/Users/sungi/Documents/DSC672/saved_images/'):
     
     start_ts = time.time()
-    os.chdir('C:/Users/sungi/Documents/DSC672/saved_images/')
+    os.chdir(save_dir)
     for i in range(len(train_img_data)):
         img_name = 'training/%s.jpg' % (str(i))
         cv2.imwrite(img_name, train_img_data[i])
