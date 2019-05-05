@@ -3,6 +3,7 @@
 
 # meant to be used post merging, only removes the year level of the folder names
 # change the directory according to your device before using
+# post pre-processed dataset can be found here: https://www.kaggle.com/sungtheillest/vehicledetected-stanford-cars-data-classes-folder
 
 
 
