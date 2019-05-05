@@ -6,6 +6,7 @@
 # change the directory according to your device before using
 # meant to be used on the Stanford Cars Dataset by classes folder
 # which can be downloaded here: https://www.kaggle.com/jutrera/stanford-car-dataset-by-classes-folder
+# post pre-processed dataset can be found here: https://www.kaggle.com/sungtheillest/vehicledetected-stanford-cars-data-classes-folder
 
 
 
