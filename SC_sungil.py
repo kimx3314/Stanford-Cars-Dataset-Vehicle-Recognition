@@ -3,7 +3,7 @@
 #          detecting the vehicle of interest within images utilizing bounding boxes    (vehicle_detect)
 #          saving images as jpg files                                                  (save_as_jpg)
 #          splitting Stanford Cars class labels into Make/Model/Type/Year              (split_labels)
-#          saving the split class labels into a csv                                    (csv_convrt)
+#          saving the split class labels into a csv format                             (csv_convrt)
 #          removing the year in the Stanford Cars labels and adjusting the class_nums  (rmv_year)
 #          removing the year and model in the labels and adjusting the class_nums      (rmv_model_year)
 #          converting images to grayscale                                              (gray_convrt)
