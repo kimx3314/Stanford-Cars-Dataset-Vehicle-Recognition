@@ -1,6 +1,6 @@
 # altered by Sean Sungil Kim                  < https://github.com/kimx3314 >
 # reference:                                  < https://github.com/surmenok/keras_lr_finder >
-# used for analyzing learning rates vs loss
+# used for learning rate tuning
 
 
 
